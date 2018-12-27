@@ -1,2 +1,3 @@
 # init
-Initial repository changed.
+
+Some general notes here.
