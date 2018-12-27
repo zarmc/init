@@ -1,0 +1,25 @@
+<!-- 
+for: https://github.com/jal278/spotify-playlist-export
+
+To download all playlists copy the following at console of chrome. the part below is not from the original dist.
+
+Array.prototype.forEach.call(document.querySelectorAll("li a"),
+ function(c, i){
+ setTimeout( function(){ if(i>=0){
+				c.click();
+				setTimeout(
+					function(){
+						var e = document.createElement('a'); 
+						var file = new Blob([$("#playlist-detail table")[0].innerHTML], {type: 'text/html'});
+						e.href = URL.createObjectURL(file);
+						e.download = "playlist_"+$("#playlist-detail h2")[0].innerHTML+".html"; 
+						e.click(); 
+					}
+					,3000); 
+				}
+			 }
+ , 5000*i);  
+ }
+);
+
+-->
